@@ -1,13 +1,4 @@
----
-title: Audit-StaleADComputersInOU
-description: Reports on and optionally takes action on stale AD Computer objects
-dependencies: Powershell
-keywords: audit, stale, ad, computer, object, disable, csv, move, description
-output: CSV file
-type: PowerShell 5.1
----
-
-## Overview
+# Summary
 This script reports on AD computer objects in a given OU which have a LastLoginTimeStamp older than a given age.  
 By default this data is reported to the console screen.  
 There are optional switches for exporting data to a CSV-formatted file, disabling the objects, modifying their descriptions, and moving them.  
@@ -155,3 +146,6 @@ PS> Audit-StaleADComputersInOU -OUDNs "OU=Muskin,OU=MechSE,OU=BasicSupport,OU=Mo
 	This script supports the -WhatIf flag, but know that it will make the output very hard to read.  
 	To reload the script as a module after making an edit when the module is already loaded, use: `PS> Import-Module <script>.psm1 -Force`  
 	By Matt Seng (mseng3) and Kaiwen Xue (kxue2), Summer 2019  
+	
+# Notes
+- By mseng3. See my other projects here: https://github.com/mmseng/code-compendium.
