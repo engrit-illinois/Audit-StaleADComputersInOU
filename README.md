@@ -3,7 +3,7 @@ This script reports on AD computer objects in a given OU which have a LastLoginT
 By default this data is reported to the console screen.  
 There are optional switches for exporting data to a CSV-formatted file, disabling the objects, modifying their descriptions, and moving them.  
 
-## Setup and Requirements
+# Setup and Requirements
 
 ### Requirements
 
@@ -23,18 +23,20 @@ You can do this temporarily by setting the execution policy to bypass for only t
 
 `PS> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 
-## Usage and parameters
+# Usage and parameters
 
 See top of script file for documentation. A copy of this is provided below for convenience.  
 Once the module is imported, you can run the following command to output the documentation to the console:  
 
 `PS> Get-Help Audit-StaleADComputersInOU -Full`
 
-## Output
+# Output
 
 See included `test.log` and `test.csv` files for example output.
 
-## Example #1
+# Examples
+
+### Example #1
 
 This example will do the following:
 1. Return all computers objects in the `Engineering/MobileDevices/BasicSupport/MechSE/Muskin` OU which have a LastLogonTimeStamp older than 1 year
@@ -48,7 +50,7 @@ PS> Import-Module .\Audit-StaleADComputersInOU.psm1
 PS> Audit-StaleADComputersInOU -OUDNs "OU=Muskin,OU=MechSE,OU=BasicSupport,OU=MobileDevices,OU=Engineering,OU=Urbana,DC=ad,DC=uillinois,DC=edu" -DaysInactive 365 -OverwriteCSV -ExportToCSV .\test.csv -Log .\test.log
 ```
 
-## Example #2
+### Example #2
 
 This example will do the following:
 1. Return all computers objects in the `Engineering/MobileDevices/BasicSupport/MechSE/Muskin` OU which have a LastLogonTimeStamp older than 1 year
@@ -64,7 +66,7 @@ PS> Import-Module .\Audit-StaleADComputersInOU.psm1
 PS> Audit-StaleADComputersInOU -OUDNs "OU=Muskin,OU=MechSE,OU=BasicSupport,OU=MobileDevices,OU=Engineering,OU=Urbana,DC=ad,DC=uillinois,DC=edu" -DaysInactive 365 -AddNote "Moved from <ou>" -Disable -MoveToOUDN "OU=2019-stale-object-audit,OU=BasicSupport,OU=MobileDevices,OU=Engineering,OU=Urbana,DC=ad,DC=uillinois,DC=edu" -OverwriteCSV -ExportToCSV .\test.csv -Log .\test.log
 ```
     
-## Copy of in-script documentation (v1.1)
+# Copy of in-script documentation (v1.1)
 
 .SYNOPSIS
     Version 1.1  
