@@ -11,10 +11,8 @@ There are optional switches for exporting data to a CSV-formatted file, disablin
 
 ### Installation:
 
-1. Download this script.
-2. Place it in a local folder, such as `C:\Scripts`.
-3. Import the script as a module: `PS> Import-Module c:\path\to\Audit-StaleADComputersInOU.psm1 [-Force]`.
-4. Run the module as a regular cmdlet using the provided example syntax as a guide.
+1. Download `Audit-StaleADComputersInOU.psm1` to `$HOME\Documents\WindowsPowerShell\Modules\Audit-StaleADComputersInOU\Audit-StaleADComputersInOU.psm1`.
+2. Run it using the provided example syntax as a guide.
 
 ### Permissions:
 
