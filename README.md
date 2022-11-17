@@ -11,9 +11,8 @@ There are optional switches for exporting data to a CSV-formatted file, disablin
 
 ### Installation:
 
-1. Download `Audit-StaleADComputersInOU.psm1` to `$HOME\Documents\WindowsPowerShell\Modules\Audit-StaleADComputersInOU\Audit-StaleADComputersInOU.psm1`.
-    - The module is now already available for use with your regular account, however for many features to work, it needs to modify AD objects which likely only your SU account will have access to.
-    - To make the module available as your SU account: see [here](https://github.com/engrit-illinois/how-to-run-custom-powershell-modules-as-another-user).
+1. Download `Audit-StaleADComputersInOU.psm1` to the appropriate subdirectory of your PowerShell [modules directory](https://github.com/engrit-illinois/how-to-install-a-custom-powershell-module).
+    - The module is now already available for use with your regular account, however for many features to work, it needs to modify AD objects which likely only your SU account will have access to. To make the module available as your SU account: see [here](https://github.com/engrit-illinois/how-to-run-custom-powershell-modules-as-another-user).
 2. Run it using the provided example syntax as a guide.
 
 ### Permissions:
